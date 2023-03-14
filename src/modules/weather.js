@@ -7,8 +7,7 @@ export default class Weather {
     const openWeatherMapApi = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${Weather.apiKey}`;
     const response = await fetch(openWeatherMapApi, { mode: "cors" });
     const weatherData = await response.json();
-    const weatherDto = this.mapResponseToDto(weatherData);
-    console.log(weatherDto);
+    return this.mapResponseToDto(weatherData);
   }
 
   static mapResponseToDto(response) {

@@ -1,3 +1,3 @@
-import Weather from "./modules/weather";
+import UI from "./modules/UI";
 
-Weather.fetchWeatherForLocation(50.0334592, 21.9840512);
+UI.initialize();
