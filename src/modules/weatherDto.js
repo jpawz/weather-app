@@ -7,4 +7,5 @@ export class WeatherDto {
   pressure;
   visibility;
   windSpeed;
+  cityName;
 }

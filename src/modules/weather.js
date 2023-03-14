@@ -20,6 +20,7 @@ export default class Weather {
     weatherDto.pressure = response.main.pressure;
     weatherDto.visibility = response.visibility;
     weatherDto.windSpeed = response.wind.speed;
+    weatherDto.cityName = response.name;
     return weatherDto;
   }
 }

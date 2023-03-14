@@ -27,5 +27,6 @@ export default class UI {
     document.getElementById("description").innerText =
       weatherDto.weatherDescription;
     document.getElementById("weatherState").innerText = weatherDto.weatherState;
+    document.getElementById("cityName").innerText = weatherDto.cityName;
   }
 }
