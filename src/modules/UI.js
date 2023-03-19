@@ -16,13 +16,18 @@ export default class UI {
   static updateWeatherData(weatherDto) {
     document.getElementById("weatherState").innerText = weatherDto.weatherState;
     document.getElementById("cityName").innerText = weatherDto.cityName;
-    document.getElementById("temperature").innerText = weatherDto.temperature;
+    document.getElementById("temperature").innerText =
+      weatherDto.temperature + "℃";
     document.getElementById("feelsLikeTemperature").innerText =
-      weatherDto.feelsLikeTemperature;
-    document.getElementById("humidity").innerText = weatherDto.humidity;
-    document.getElementById("pressure").innerText = weatherDto.pressure;
-    document.getElementById("visibility").innerText = weatherDto.visibility;
-    document.getElementById("windSpeed").innerText = weatherDto.windSpeed;
+      "feels like " + weatherDto.feelsLikeTemperature + "℃";
+    document.getElementById("humidity").innerText =
+      "humidity " + weatherDto.humidity + "%";
+    document.getElementById("pressure").innerText =
+      "pressure " + weatherDto.pressure + " hPa";
+    document.getElementById("visibility").innerText =
+      "visibility " + weatherDto.visibility + " m";
+    document.getElementById("windSpeed").innerText =
+      "wind speed " + weatherDto.windSpeed + " m/s";
   }
 
   static setBackgroundImage(weatherDescription) {

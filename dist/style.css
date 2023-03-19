@@ -1,0 +1,25 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 30%;
+  width: 90%;
+  margin-left: 10%;
+}
+
+.weather {
+    display: flex;
+    gap: 25px;
+}
+
+.data {
+    padding-left: 10px;
+    border-left: solid black;
+}
+
+#temperature {
+  font-size: 5rem;
+  font-weight: bold;
+}

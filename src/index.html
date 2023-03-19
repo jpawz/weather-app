@@ -6,20 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
 </head>
 
 <body>
-    <h2 id="weatherState"></h2>
-    <h1 id="cityName"></h1>
-    <div id="temperature"></div>
-    <div id="feelsLikeTemperature"></div>
-    <div id="humidity"></div>
-    <div id="pressure"></div>
-    <div id="windSpeed"></div>
-    <div id="visibility"></div>
+    <div class="container">
+        <h2 id="weatherState"></h2>
+        <h1 id="cityName"></h1>
+        <div class="weather">
+            <div id="temperature"></div>
+            <div class="data">
+                <div id="feelsLikeTemperature"></div>
+                <div id="humidity"></div>
+                <div id="pressure"></div>
+                <div id="windSpeed"></div>
+                <div id="visibility"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
