@@ -15,8 +15,8 @@ export default class Weather {
     const weatherDto = new WeatherDto();
     weatherDto.weatherDescription = response.weather[0].description;
     weatherDto.weatherState = response.weather[0].main;
-    weatherDto.temperature = response.main.temp;
-    weatherDto.feelsLikeTemperature = response.main.feels_like;
+    weatherDto.temperature = Math.round(response.main.temp);
+    weatherDto.feelsLikeTemperature = Math.round(response.main.feels_like);
     weatherDto.humidity = response.main.humidity;
     weatherDto.pressure = response.main.pressure;
     weatherDto.visibility = response.visibility;
