@@ -1,24 +1,20 @@
 import Weather from "./weather";
+import Location from "./location";
 
 export default class UI {
-  static initialize() {
-    UI.initInputs();
-  }
-
-  static initInputs() {
-    const button = document.getElementById("button");
-    button.addEventListener("click", () => {
-      const latitude = document.getElementById("latitude").value;
-      const longitude = document.getElementById("longitude").value;
-      Weather.fetchWeatherForLocation(latitude, longitude).then(
-        UI.updateWeatherData
-      );
-    });
+  static async initialize() {
+    const location = await Location.getLocation();
+    const { latitude, longitude } = location;
+    const weatherData = await Weather.fetchWeatherForLocation(
+      latitude,
+      longitude
+    );
+    UI.updateWeatherData(weatherData);
   }
 
   static updateWeatherData(weatherDto) {
-      document.getElementById("weatherState").innerText = weatherDto.weatherState;
-      document.getElementById("cityName").innerText = weatherDto.cityName;
+    document.getElementById("weatherState").innerText = weatherDto.weatherState;
+    document.getElementById("cityName").innerText = weatherDto.cityName;
     document.getElementById("temperature").innerText = weatherDto.temperature;
     document.getElementById("feelsLikeTemperature").innerText =
       weatherDto.feelsLikeTemperature;
